@@ -1,3 +1,4 @@
+<?php require '../check_admin_login.php';?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,19 +9,25 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Đây là giao diện admin</h1>
-<ul>
-    <li>
-        <a href="../manufacturers">
-            <h2>Quản lí nhà sản xuất</h2>
-        </a>
-        <br>
-    </li>
-    <li>
-        <a href="../products">
-            <h2>Quản lí nhà sản phẩm</h2>
-        </a>
-    </li>
-</ul>
+<table border="1" width="100%">
+    <tr>
+        <td bgcolor="#FFFF99" width="100%">
+            <a href="../root/index.php">
+                <h1 align="center">ADMIN</h1>
+            </a>
+            <h2 align="center">Xin chào, <?php echo $_SESSION['name'] ?></h2>
+            <h3 align="center">
+                <a href="../logout.php">
+                    Đăng xuất
+                </a>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#CCCCCC" width="100%">
+            <?php require '../menu.php'; ?>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

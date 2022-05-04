@@ -1,3 +1,4 @@
+<?php require '../check_admin_login.php';?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,34 +10,66 @@
 </head>
 <body>
 <?php
-require '../menu.php';
 require '../connect.php';
 $sql = "select * from manufacturers";
 $result = mysqli_query($conn,$sql);
 $each = mysqli_fetch_array($result);
 ?>
 <form action="process_insert.php" method="post" enctype="multipart/form-data">
-    Tên
+    <table border="1">
+        <tr>
+            <td>
+                Tên
+            </td>
+            <td>
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ảnh
+            </td>
+            <td>
+                <input type="file" name="image">
+            </td>
+        </tr>
+        <tr>
+            <td>Giá</td>
+            <td><input type="number" name="price"></td>
+        </tr>
+        <tr>
+            <td>Mô tả</td>
+            <td>
+                <textarea name="description"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>Thêm</button>
+            </td>
+        </tr>
+    </table>
+    <!--Tên
     <input type="text" name="name">
     <br>
     Ảnh
-    <input type="file" name="image">
+
     <br>
     Giá
     <input type="number" name="price">
     <br>
     Mô tả
     <textarea name="description"></textarea>
-    <br>
-    Nhà SX
+    <br> -->
+    <!--Nhà SX
     <select name="manufacturers" id="">
         <?php foreach ($result as $each){ ?>
             <option value="<?php echo $each['id'] ?>">
                 <?php echo $each['name']?>
             </option>
         <?php } ?>
-    </select>
-    <button>Thêm</button>
+    </select> -->
+
 </form>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<?php require '../check_admin_login.php';?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +11,6 @@
 <body>
 <?php
 $id = $_GET['id'];
-require '../menu.php';
 require '../connect.php';
 $sql = "select * from products where id = '$id'";
 $result = mysqli_query($conn,$sql);
@@ -39,7 +39,7 @@ $manufacturers = mysqli_query($conn,$sql);
         <?php echo $each['description'] ?>
     </textarea>
     <br>
-    Nhà SX
+    <!--Nhà SX
     <select name="manufacturers" id="">
         <?php foreach ($manufacturers as $manufacturer){ ?>
             <option value="<?php echo $manufacturer['id'] ?>"
@@ -50,7 +50,7 @@ $manufacturers = mysqli_query($conn,$sql);
                 <?php echo $manufacturer['name']?>
             </option>
         <?php } ?>
-    </select>
+    </select> -->
     <button>Sửa</button>
 </form>
 </body>

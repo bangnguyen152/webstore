@@ -1,3 +1,4 @@
+<?php require '../check_SUadmin_login.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>

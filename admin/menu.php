@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,16 +9,25 @@
     <title>Document</title>
 </head>
 <body>
-<ul>
+<ul type="none">
     <li>
-        <a href="../manufacturers">
-            Quản lí nhà sản xuất
+        <a href="../products">
+            <h3 >Quản lí sản phẩm</h3>
         </a>
     </li>
     <li>
-        <a href="../products">
-            Quản lí sản phẩm
+        <a href="../orders">
+            <h3 >Quản lí đơn hàng</h3>
         </a>
+    </li>
+    <li>
+        <?php if (!isset($_SESSION['level'])||$_SESSION['level']!=0){
+
+        }else{ ?>
+            <a href="../employees">
+                <h3 >Quản lí nhân viên</h3>
+            </a>
+        <?php } ?>
     </li>
 </ul>
 </body>
