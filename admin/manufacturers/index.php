@@ -8,14 +8,13 @@
     <title>Document</title>
 </head>
 <body>
+<a href="../root/index.php">Trở lại</a>
 <h1>Đây là khu vực quản lí nhà sản xuất</h1>
 <br>
 <a href="form_insert.php">
     Thêm
 </a>
-<?php
-require '../menu.php'
-?>
+
 <?php
 require '../connect.php';
 $sql = 'select * from manufacturers';

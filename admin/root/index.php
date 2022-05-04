@@ -8,11 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-Đây là giao diện admin
+<h1>Đây là giao diện admin</h1>
 <ul>
     <li>
         <a href="../manufacturers">
-            Quản lí nhà sản xuất
+            <h2>Quản lí nhà sản xuất</h2>
+        </a>
+        <br>
+    </li>
+    <li>
+        <a href="../products">
+            <h2>Quản lí nhà sản phẩm</h2>
         </a>
     </li>
 </ul>

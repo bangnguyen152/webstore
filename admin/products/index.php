@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+<a href="../root/index.php">Trở lại</a>
 <?php
-require '../menu.php';
+//require '../menu.php';
 require '../connect.php';
 $sql = "select 
     products.*, manufacturers.name as manufaceturer_name
